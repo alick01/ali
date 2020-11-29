@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>clamtk</Name>
+        <Homepage>http://clamtk.sourceforge.net</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>clamtk</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Simple GUI for Clam Antivirus</Summary>
+        <Description>ClamTk is a graphical frontend for Clam Antivirus. It is designed to be a lightweight, easy-to-use, point-and-click virus scanner.</Description>
+        <Archive sha1sum="d8c9328fdb075dbb0d05bb9c7fbe27850bb0f234" type="targz">https://sourceforge.net/projects/clamtk/files/ClamTk/4.45/clamtk-4.45.tar.gz</Archive>
+        <Patches>
+            <!-- Patch>clamtk-icon.patch</Patch -->
+        </Patches>
+    </Source>
+    <Package>
+        <Name>clamtk</Name>
+        <RuntimeDependencies>
+            <Dependency>clamav</Dependency>
+            <Dependency>kcron</Dependency>
+            <Dependency>desktop-file-utils</Dependency>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-HTTP-Message</Dependency>
+            <Dependency>perl-JSON</Dependency>
+            <Dependency>perl-libwww</Dependency>
+            <Dependency>perl-LWP-Protocol-https</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>zenity</Dependency>
+            <!--<Dependency>perl-Locale-gettext</Dependency>
+            <Dependency>perl-Text-CSV</Dependency>
+            <Dependency>perl-Gtk3</Dependency> -->
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="localedata">/usr/share/icons/oxygen</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/clamtk.png">clamtk.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+			<Date>2020-11-23</Date>
+			<Version>4.45</Version>
+			<Comment>First Release For Beta</Comment>
+			<Name>Ali Cengiz Kurt</Name>
+			<Email>alicengizkurt@gmail.com</Email>
+		</Update>
+    </History>
+</PISI>

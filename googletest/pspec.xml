@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>googletest</Name>
+        <Homepage>http://code.google.com/p/googletest/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Google C++ testing framework</Summary>
+        <Description>Google's framework for writing C++ tests on a variety of platforms (GNU/Linux, Mac OS X, Windows, Windows CE, and Symbian). Based on the xUnit architecture. Supports automatic test discovery, a rich set of assertions, user-defined assertions, death tests, fatal and non-fatal failures, various options for running the tests, and XML test report generation.</Description>
+        <Archive sha1sum="9c89be7df9c5e8cb0bc20b3c4b39bf7e82686770" type="targz">https://github.com/google/googletest/archive/release-1.10.0.tar.gz</Archive>
+        <Patchs>
+        <Patch>gtest-1.10.0-libversion.patch</Patch>
+        </Patchs>
+    </Source>
+
+    <Package>
+        <Name>gtest</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/cmake</Path>
+            <Path fileType="doc">/usr/share/gtest</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="doc">/usr/share/licenses</Path>
+            <Path fileType="doc">/usr/src</Path>
+        </Files>
+        <BuildDependencies>
+        </BuildDependencies>
+    </Package>
+    
+    <Package>
+        <Name>gtest-devel</Name>
+        <Summary>Development files for gtest</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gtest</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig/googletest/*.pc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+			<Date>2020-11-26</Date>
+			<Version>1.10.0</Version>
+			<Comment>Rebuild.For Beta System</Comment>
+			<Name>Ali Cengiz Kurt</Name>
+			<Email>alicengizkurt@gmail.com</Email>
+		</Update>
+    </History>
+</PISI>
