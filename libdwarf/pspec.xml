@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libdwarf</Name>
+        <Homepage>https://www.prevanders.net/dwarf.html</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPL</License>
+        <IsA>library</IsA>
+        <Summary>A library for handling DWARF Debugging Information Format</Summary>
+        <Description>Genel Ek Listesi kitaplığı</Description>
+        <Archive sha1sum="24b881521955dd55e953131e4219ec9a2a44b43b" type="zip">https://sourceforge.net/code-snapshots/git/l/li/libdwarf/code.git/libdwarf-code-ea05973c08d6a63dba00c73cfaaf57d36145e32e.zip</Archive>
+        <BuildDependencies>
+            <Dependency>elfutils-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libdwarf</Name>
+        <RuntimeDependencies>
+            <Dependency>elfutils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/dwarfdump</Path>
+            <Path fileType="man">/usr/share/libdwarf</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>libdwarf-devel</Name>
+        <Summary>Development files for libdwarf</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libdwarf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2020-10-08</Date>
+            <Version>20201020</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Cengiz Kurt</Name>
+            <Email>alicengizkurt@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,8 @@
+diff --git a/testing/properties-cpp/APKBUILD b/community/properties-cpp/APKBUILD
+index 02fe686d74..02fe686d74 100644
+--- a/testing/properties-cpp/APKBUILD
++++ b/community/properties-cpp/APKBUILD
+diff --git a/testing/properties-cpp/cmake-cleanup.patch b/community/properties-cpp/cmake-cleanup.patch
+index 570b6899a8..570b6899a8 100644
+--- a/testing/properties-cpp/cmake-cleanup.patch
++++ b/community/properties-cpp/cmake-cleanup.patch

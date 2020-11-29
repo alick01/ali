@@ -1,0 +1,40 @@
+--- Makefile.orig	2020-05-24 09:11:32.000000000 +0300
++++ Makefile	2020-05-24 09:14:41.507035828 +0300
+@@ -110,10 +110,9 @@
+ 
+ PAPER_LIB:=$(call linktest,-lpaper,)
+ PNG:=$(call linktest,-lpng,)
+-PNG:=$(if $(PNG),$(PNG),$(call linktest,-lpng12,))
+ 
+-FRIBIDI_LIB:=$(shell $(PKG_CONFIG) --libs fribidi)
+-FRIBIDI_CFLAGS:=$(shell $(PKG_CONFIG) --cflags fribidi)
++FRIBIDI_LIB:=$(shell pkg-config --libs fribidi)
++FRIBIDI_CFLAGS:=$(shell pkg-config --cflags fribidi)
+ 
+ windows_ARCH_LINKS:=-lintl $(PNG) -lzdll -lwinspool -lshlwapi $(FRIBIDI_LIB) -liconv
+ osx_ARCH_LINKS:=$(FRIBIDI_LIB)
+@@ -131,10 +130,10 @@
+ # For macOS, the prefix is relative to DESTDIR.
+ windows_PREFIX:=/usr/local
+ osx_PREFIX:=Resources
+-linux_PREFIX:=/usr/local
+-PREFIX:=$($(OS)_PREFIX)
+-
+-# Root directory to place files when creating packages.
+++linux_PREFIX:=/usr
++ PREFIX:=$($(OS)_PREFIX)
++ 
++ # Root directory to place files when creating packages.
+ # PKG_ROOT is the old name for this, and should be undefined.
+ # macOS is set up as a bundle, with all files under 'Contents'.
+ # "TuxPaint-1" is the OLPC XO name. Installing to ./ is bad!
+@@ -188,6 +187,9 @@
+ # Icons and launchers:
+ ICON_PREFIX:=$(DESTDIR)$(PREFIX)/share/pixmaps
+ X11_ICON_PREFIX:=$(DESTDIR)$(PREFIX)/share/pixmaps
++ GNOME_PREFIX:=$(shell gnome-config --prefix 2> /dev/null)
++ KDE_PREFIX:=$(shell kde-config --install apps --expandvars 2> /dev/null)
++ KDE_ICON_PREFIX:=$(shell kde-config --install icon --expandvars 2> /dev/null)
+ 
+ # Maemo flag
+ MAEMOFLAG:=

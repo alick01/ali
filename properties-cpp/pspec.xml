@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>properties-cpp</Name>
+        <Homepage>https://launchpad.net/properties-cpp</Homepage>
+        <Packager>
+            <Name>Ali Cengiz Kurt</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>LGPL3</License>
+        <IsA>library</IsA>
+        <Summary>A very simple convenience library for handling properties and signals in C++11</Summary>
+        <Description>A very simple convenience library for handling properties and signals in C++11.</Description>
+        <Archive sha1sum="b69da1dfd10061572c5ae3f15f5f86aaed0e2207" type="targz">https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/properties-cpp/0.0.2-3/properties-cpp_0.0.2.orig.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gmock-devel</Dependency>
+            <Dependency>gtest-devel</Dependency>
+            <Dependency>doxygen</Dependency>
+            <Dependency>graphviz</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>libgcc</Dependency>
+        </BuildDependencies>
+        <Patchs>
+            <Patch>camake-cleanup.patch</Patch>
+        </Patchs>
+        </Source>
+
+    <Package>
+        <Name>properties-cpp</Name>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path>/usr/local/share/properties-cpp</Path>
+            <Path>/usr/local/share/doc/properties-cpp</Path>
+            <Path>/usr/local/include/core/</Path>            
+            <Path fileType="library">/usr/local/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>properties-cpp-devel</Name>
+        <Summary>Development files for properties-cpp</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">properties-cpp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-11-26</Date>
+            <Version>0.0.2</Version>
+            <Comment>First Release For 2.0</Comment>
+            <Name>Ali Cengiz Kurt</Name>
+            <Email>alicengizkurt@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+ 
