@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>tuxpaint</Name>
+        <Homepage>http://www.tuxpaint.org/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Drawing program for kids</Summary>
+        <Description>Tux Paint is a drawing program for children ages 3 to 12 (preschool and K-6). It combines an easy-to-use interface, fun sound effects, and an encouraging cartoon mascot who guides children as they use the program. Kids are presented with a blank canvas and a variety of drawing tools to help them be creative.</Description>
+        <Archive sha1sum="4f282db5bc5c027a8af91c45dc1a69edc5d25858" type="targz">file:///home/cengiz/Works/cengiz/tuxpaint/tuxpaint-0.9.24.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libsdl-devel</Dependency>
+            <Dependency>sdl-ttf-devel</Dependency>
+            <Dependency>icon-theme-hicolor</Dependency>
+            <Dependency>imagemagick-devel</Dependency>
+            <Dependency>sdl-mixer-devel</Dependency>
+            <Dependency>sdl-image-devel</Dependency>
+            <Dependency>netpbm-devel</Dependency>
+            <Dependency>libpaper-devel</Dependency>
+            <Dependency>sdl-pango-devel</Dependency>
+            <Dependency>librsvg-devel</Dependency>
+            <Dependency>fribidi-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!--Patch level="1">libpng_inspath.patch</Patch -->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>tuxpaint-doc</Name>
+        <RuntimeDependencies>
+            <Dependency>tuxpaint</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/tuxpaint</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>tuxpaint</Name>
+        <RuntimeDependencies>
+            <Dependency>libsdl</Dependency>
+            <Dependency>libpng15</Dependency>
+            <Dependency>sdl-ttf</Dependency>
+            <Dependency>gperf</Dependency>
+            <Dependency>imagemagick</Dependency>
+            <Dependency>setconf</Dependency>
+            <Dependency>sdl-mixer</Dependency>
+            <Dependency>sdl-image</Dependency>
+            <Dependency>netpbm</Dependency>
+            <Dependency>libpaper</Dependency>
+            <Dependency>sdl-pango</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>fribidi</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/tuxpaint</Path>
+            <Path fileType="config">/etc/bash_completion.d</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/tuxpaint/plugins</Path>h>
+            <Path fileType="library">/usr/include/tuxpaint</Path>h>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/tuxpaint</Path>
+            <Path fileType="icons">/usr/share/icons/hicolor</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+        </Files>
+    </Package>
+
+    
+    <History>
+        <Update release="1">
+            <Date>2020-10-10</Date>
+            <Version>0.9.24</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Cengiz Kurt</Name>
+            <Email>alicengizkurt@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
