@@ -24,11 +24,11 @@
             <Dependency>libpng-devel</Dependency>
             <Dependency>readline-devel</Dependency>
             <Dependency>sqlite-devel</Dependency>
+            <Dependency>gtkglext-devel</Dependency>
             <!-- Dependency>gettext-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>libcanberra-devel</Dependency>
             <Dependency>ftgl-devel</Dependency>
-            <Dependency>gtkglext-devel</Dependency>
             <Dependency>pkgconfig</Dependency -->
         </BuildDependency>
         <Patches>
@@ -49,10 +49,10 @@
             <Dependency>readline</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>sqlite</Dependency>
+            <Dependency>gtkglext</Dependency>
             <!-- Dependency>gtk2</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>mesa-glu</Dependency>
-            <Dependency>gtkglext</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libcanberra</Dependency>
             <Dependency>libcanberra-gtk</Dependency>
