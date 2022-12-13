@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<PISI>
-    <Source>
-        <Name>properties-cpp</Name>
-        <Summary xml:lang="en">A very simple convenience library for handling properties and signals in C++11</Summary>
-        <Description xml:lang="en">A very simple convenience library for handling properties and signals in C++11</Description>
-    </Source>
-</PISI>

@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<PISI>
-    <Source>
-        <Name>libdwarf</Name>
-        <Summary xml:lang="tr">A library for handling DWARF Debugging Information Format</Summary>
-        <Description xml:lang="tr">Genel Ek Listesi kitaplığı</Description>
-    </Source>
-</PISI>
