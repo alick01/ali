@@ -10,10 +10,9 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-    cmaketools.configure("--DCMAKE_INSTALL_PREFIX=/usr \
+    cmaketools.configure("-DCMAKE_INSTALL_PREFIX=/usr \
                          -DCMAKE_INSTALL_LIBDIR=lib    \
-                         -DFG_DATA_DIR=/usr/share/flightgear  \
-                         --enable-flite")
+                         -DFG_DATA_DIR=/usr/share/flightgear")
 
 def build():
     cmaketools.make()

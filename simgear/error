@@ -1,0 +1,8 @@
+alue, AllocatorOrContainer>::type = boost::container::vector<int, void, void>; value_type = int]’
+/usr/include/boost/container/flat_set.hpp:670:4:   required from ‘boost::container::flat_set<Key, Compare, Allocator>::insert_return_pair boost::container::flat_set<Key, Compare, Allocator>::insert(value_type&&) [with Key = int; Compare = std::less<int>; AllocatorOrContainer = void; insert_return_pair = std::pair<boost::container::vec_iterator<int*, false>, bool>; value_type = int]’
+/var/pisi/simgear-2024.1.2-4/work/simgear-2024.1.2/simgear/canvas/events/KeyboardEvent.cxx:256:26:   required from here
+/usr/include/boost/move/detail/meta_utils_core.hpp:73:8: error: ‘value’ is not a member of ‘boost::container::dtl::is_memtransfer_copy_assignable<int*, int*>’
+   73 | struct enable_if : enable_if_c<Cond::value, T> {};
+      |        ^~~~~~~~~
+/usr/include/boost/move/detail/meta_utils_core.hpp: In instantiation of ‘struct boost::move_detail::disable_if<boost::container::dtl::is_memtransfer_copy_assignable<int*, int*>, int*>’:
+/usr/include/boost/container/detail/copy_move_algo.hpp:175:8:   required from ‘struct boost::container::dtl::disable_if_memtransfer_copy_assignable<int*, int*, int*>’
