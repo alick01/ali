@@ -1,6 +1,0 @@
- from here
-/usr/include/boost/container/allocator_traits.hpp:94:4: error: cannot convert ‘std::pair<int, std::pair<const char*, unsigned char> >’ to ‘int’ in initialization
-   94 |    ::new((void*)p, boost_container_new_t()) T(::boost::forward<Args>(args)...);
-      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-make[2]: *** [simgear/CMakeFiles/SimGearScene.dir/build.make:569: simgear/CMakeFiles/SimGearScene.dir/canvas/events/KeyboardEvent.cxx.o] Error 1
-make[2]: *** Bitmemiş işler için bekliyor....
