@@ -16,6 +16,7 @@
         <Archive sha1sum="a921d770bb9df9ffc6d3ae04f21592f87c685272"  type="targz">https://github.com/atari800/atari800/releases/download/ATARI800_5_2_0/atari800-5.2.0-src.tgz</Archive>
         <BuildDependencies>
             <Dependency>libsdl2-devel</Dependency>
+            <Dependency>libsdl3-devel</Dependency>
             <Dependency>libsdl-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
         </BuildDependencies>
@@ -26,6 +27,8 @@
     <Package>
         <Name>atari800</Name>
         <RuntimeDependencies>
+            <Dependency>libsdl3</Dependency>
+            <Dependency>libsdl3-32bit</Dependency>
             <Dependency>libsdl2</Dependency>
             <Dependency>libsdl2-32bit</Dependency>            
             <Dependency>libsdl</Dependency>

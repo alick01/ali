@@ -20,17 +20,16 @@
             <Dependency>pango-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra-devel</Dependency>
             <Dependency>ftgl-devel</Dependency>
             <Dependency>curl-devel</Dependency>
             <Dependency>freetype-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
             <Dependency>gtkglext-devel</Dependency>
             <Dependency>readline-devel</Dependency>
-            <Dependency>Bitstream-Vera-fonts</Dependency>
             <Dependency>sqlite-devel</Dependency>
             <Dependency>pkgconfig</Dependency>
-            <Dependency>gettext</Dependency>
+            <Dependency>gettext-devel</Dependency>
         </BuildDependency>
         <Patches>
             <Patch level="1">pixmaps_dir_fix.patch</Patch>
