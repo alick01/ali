@@ -1,23 +1,18 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
-from pisi.actionsapi import cmaketools
-from pisi.actionsapi import shelltools
-from pisi.actionsapi import pisitools
-from pisi.actionsapi import get
+from pisi.actionsapi import get, pisitools, shelltools
 
-def setup():
-    cmaketools.configure("-DCMAKE_INSTALL_PREFIX=/usr \
-                         -DCMAKE_INSTALL_LIBDIR=lib    \
-                         -DFG_DATA_DIR=/usr/share/flightgear")
+NoStrip = ["/opt", "/usr"]
+IgnoreAutodep = True
+Version = get.srcVERSION()
 
-def build():
-    cmaketools.make()
-    
+
 def install():
-    cmaketools.install()
-    
-    pisitools.dodoc("README*", "ChangeLog", "AUTHORS", "NEWS", "Thanks")
+    pisitools.dodir ("/opt/flightgear")
+    pisitools.doexe("flightgear-%s-linux-amd64.AppImage" % Version, "/opt/flightgear")
+    pisitools.dosym("/opt/flightgear/flightgear-%s-linux-amd64.AppImage" % Version, "/usr/bin/fgfs")
+ 
